@@ -1,3 +1,18 @@
 <resources>
     <string name="app_name">Mental Arithmetic</string>
+
+    <string name="timeLimit">2</string>
+    <string name="plusLeft">2</string>
+    <string name="plusRight">2</string>
+    <string name="subLeft">2</string>
+    <string name="subRight">2</string>
+    <string name="byLeft">2</string>
+    <string name="byRight">2</string>
+    <string name="divLeft">2</string>
+    <string name="textViewTimeLimit">制限時間</string>
+    <string name="textViewMinute">分</string>
+    <string name="TextViewPlus">たし算</string>
+    <string name="textViewDigit">桁</string>
+    <string name="textViewPlusOpe">+</string>
+
 </resources>

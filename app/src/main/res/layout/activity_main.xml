@@ -6,13 +6,124 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <!--制限時間View-->
     <TextView
+        android:id="@+id/textViewTimeLimit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="64dp"
+        android:text="@string/textViewTimeLimit"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextTimeLimit"
+        android:layout_width="64dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="64dp"
+        android:ems="@integer/editTextTimeLimit"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.25"
+        app:layout_constraintStart_toEndOf="@+id/textViewTimeLimit"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewMinute"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:text="@string/textViewMinute"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.25"
+        app:layout_constraintStart_toEndOf="@+id/editTextTimeLimit"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!--たし算View-->
+    <CheckBox
+        android:id="@+id/checkBoxPlus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="48dp"
+        android:checked="@bool/plusCheck"
+        android:scaleX="2"
+        android:scaleY="2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTimeLimit" />
+
+    <TextView
+        android:id="@+id/textViewPlus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="40dp"
+        android:text="@string/TextViewPlus"
+        android:textSize="30sp"
+        app:layout_constraintStart_toEndOf="@+id/checkBoxPlus"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTimeLimit" />
+
+    <EditText
+        android:id="@+id/editTextPlusDigitLeft"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="23dp"
+        android:ems="@integer/editTextPlusDigitLeft"
+        android:inputType="number"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@+id/textViewPlusDigitLeft"
+        app:layout_constraintHorizontal_bias="0.42"
+        app:layout_constraintStart_toEndOf="@+id/textViewPlus"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTimeLimit" />
+
+    <TextView
+        android:id="@+id/textViewPlusDigitLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="56dp"
+        android:text="@string/textViewDigit"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/editTextPlusDigitLeft"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTimeLimit" />
+
+    <TextView
+        android:id="@+id/textViewPlusOpe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="40dp"
+        android:text="@string/textViewPlusOpe"
+        android:textSize="36sp"
+        app:layout_constraintStart_toEndOf="@+id/textViewPlusDigitLeft"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTimeLimit" />
+
+    <EditText
+        android:id="@+id/editTextPlusDigitRight"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="40dp"
+        android:ems="@integer/editTextPlusDigitRight"
+        android:inputType="number"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/textViewPlusOpe"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTimeLimit" />
+
+    <TextView
+        android:id="@+id/textViewPlusDigitRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="56dp"
+        android:text="@string/textViewDigit"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/editTextPlusDigitRight"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTimeLimit" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
