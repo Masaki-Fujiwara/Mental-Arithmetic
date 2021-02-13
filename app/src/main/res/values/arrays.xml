@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="inputDigit">
+        <item>1桁</item>
+        <item>2桁</item>
+        <item>3桁</item>
+        <item>4桁</item>
+        <item>5桁</item>
+    </string-array>
+</resources>

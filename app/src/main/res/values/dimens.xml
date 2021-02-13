@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <!-- 文字サイズ（小） -->
+    <dimen name="sp_s">20sp</dimen>
+    <!-- 文字サイズ（中） -->
+    <dimen name="sp_m">30sp</dimen>
+    <!-- 文字サイズ（大） -->
+    <dimen name="sp_l">40sp</dimen>
+    <!-- 余白などのサイズ（小） -->
+    <dimen name="dp_s">4dp</dimen>
+    <!-- 余白などのサイズ（中） -->
+    <dimen name="dp_m">8dp</dimen>
+    <!-- 余白などのサイズ（大） -->
+    <dimen name="dp_l">16dp</dimen>
+    <dimen name="opeTextSize">28sp</dimen>
+    <dimen name="opeNamesTextSize">28sp</dimen>
+
+    <!--Start&End Position-->
+    <dimen name="checkBoxesStart">24dp</dimen>
+    <dimen name="opeNamesStart">10dp</dimen>
+    <dimen name="rightDigitsStart">8dp</dimen>
+    <dimen name="opesStart">0dp</dimen>
+    <dimen name="leftDigitsStart">8dp</dimen>
+
+    <!--TopPosition-->
+    <dimen name="plusElementsTop1">150dp</dimen>
+    <dimen name="subElementsTop1">250dp</dimen>
+    <dimen name="byElementsTop1">350dp</dimen>
+    <dimen name="divElementsTop1">450dp</dimen>
+    <dimen name="plusElementsTop2">145dp</dimen>
+    <dimen name="subElementsTop2">245dp</dimen>
+    <dimen name="byElementsTop2">345dp</dimen>
+    <dimen name="divElementsTop2">445dp</dimen>
+
+    <dimen name="checkBoxesTop">75dp</dimen>
+    <dimen name="opeNamesTop">60dp</dimen>
+    <dimen name="digitsTop">60dp</dimen>
+    <dimen name="opesTop">50dp</dimen>
+    <dimen name="timeLimitTextSize">28sp</dimen>
+    <dimen name="secondTextSize">28sp</dimen>
+
+</resources>

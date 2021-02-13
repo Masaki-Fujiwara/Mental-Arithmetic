@@ -12,9 +12,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
-        android:layout_marginTop="64dp"
+        android:layout_marginTop="50dp"
         android:text="@string/textViewTimeLimit"
-        android:textSize="30sp"
+        android:textSize="@dimen/timeLimitTextSize"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -22,9 +22,10 @@
         android:id="@+id/editTextTimeLimit"
         android:layout_width="64dp"
         android:layout_height="43dp"
-        android:layout_marginTop="64dp"
-        android:ems="@integer/editTextTimeLimit"
+        android:layout_marginTop="50dp"
         android:inputType="number"
+        android:maxLength="3"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.25"
         app:layout_constraintStart_toEndOf="@+id/textViewTimeLimit"
@@ -34,96 +35,243 @@
         android:id="@+id/textViewMinute"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="64dp"
+        android:layout_marginTop="50dp"
         android:text="@string/textViewMinute"
-        android:textSize="30sp"
+        android:textSize="@dimen/secondTextSize"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.25"
         app:layout_constraintStart_toEndOf="@+id/editTextTimeLimit"
         app:layout_constraintTop_toTopOf="parent" />
+
 
     <!--たし算View-->
     <CheckBox
         android:id="@+id/checkBoxPlus"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="48dp"
+        android:layout_marginStart="@dimen/checkBoxesStart"
+        android:layout_marginTop="@dimen/plusElementsTop1"
         android:checked="@bool/plusCheck"
+        android:focusable="false"
         android:scaleX="2"
         android:scaleY="2"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewTimeLimit" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textViewPlus"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginStart="@dimen/opeNamesStart"
+        android:layout_marginTop="@dimen/plusElementsTop2"
+        android:focusable="false"
         android:text="@string/TextViewPlus"
-        android:textSize="30sp"
+        android:textSize="@dimen/opeNamesTextSize"
         app:layout_constraintStart_toEndOf="@+id/checkBoxPlus"
-        app:layout_constraintTop_toBottomOf="@+id/textViewTimeLimit" />
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
-        android:id="@+id/editTextPlusDigitLeft"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginEnd="23dp"
-        android:ems="@integer/editTextPlusDigitLeft"
-        android:inputType="number"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toStartOf="@+id/textViewPlusDigitLeft"
-        app:layout_constraintHorizontal_bias="0.42"
-        app:layout_constraintStart_toEndOf="@+id/textViewPlus"
-        app:layout_constraintTop_toBottomOf="@+id/textViewTimeLimit" />
-
-    <TextView
-        android:id="@+id/textViewPlusDigitLeft"
+    <Spinner
+        android:id="@+id/inputPlusDigitLeft"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="56dp"
-        android:text="@string/textViewDigit"
-        android:textSize="18sp"
-        app:layout_constraintStart_toEndOf="@+id/editTextPlusDigitLeft"
-        app:layout_constraintTop_toBottomOf="@+id/textViewTimeLimit" />
+        android:layout_marginStart="@dimen/leftDigitsStart"
+        android:layout_marginTop="@dimen/plusElementsTop1"
+        android:focusable="false"
+        app:layout_constraintStart_toEndOf="@+id/textViewPlus"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textViewPlusOpe"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginStart="@dimen/opesStart"
+        android:layout_marginTop="@dimen/plusElementsTop2"
+        android:focusable="false"
         android:text="@string/textViewPlusOpe"
         android:textSize="36sp"
-        app:layout_constraintStart_toEndOf="@+id/textViewPlusDigitLeft"
-        app:layout_constraintTop_toBottomOf="@+id/textViewTimeLimit" />
+        app:layout_constraintStart_toEndOf="@+id/inputPlusDigitLeft"
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
-        android:id="@+id/editTextPlusDigitRight"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="40dp"
-        android:ems="@integer/editTextPlusDigitRight"
-        android:inputType="number"
-        android:textSize="18sp"
-        app:layout_constraintStart_toEndOf="@+id/textViewPlusOpe"
-        app:layout_constraintTop_toBottomOf="@+id/textViewTimeLimit" />
-
-    <TextView
-        android:id="@+id/textViewPlusDigitRight"
+    <Spinner
+        android:id="@+id/inputPlusDigitRight"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="56dp"
-        android:text="@string/textViewDigit"
+        android:layout_marginStart="@dimen/leftDigitsStart"
+        android:layout_marginTop="@dimen/plusElementsTop1"
+        android:focusable="false"
+        app:layout_constraintStart_toEndOf="@+id/textViewPlusOpe"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <!--ひき算View-->
+    <CheckBox
+        android:id="@+id/checkBoxSub"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/checkBoxesStart"
+        android:layout_marginTop="@dimen/subElementsTop1"
+        android:checked="@bool/plusCheck"
+        android:focusable="false"
+        android:scaleX="2"
+        android:scaleY="2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewSub"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/opeNamesStart"
+        android:layout_marginTop="@dimen/subElementsTop2"
+        android:focusable="false"
+        android:text="@string/TextViewSub"
+        android:textSize="@dimen/opeNamesTextSize"
+        app:layout_constraintStart_toEndOf="@+id/checkBoxSub"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Spinner
+        android:id="@+id/inputSubDigitLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/leftDigitsStart"
+        android:layout_marginTop="@dimen/subElementsTop1"
+        android:focusable="false"
+        app:layout_constraintStart_toEndOf="@+id/textViewSub"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewSubOpe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/opesStart"
+        android:layout_marginTop="@dimen/subElementsTop2"
+        android:focusable="false"
+        android:text="@string/textViewSubOpe"
+        android:textSize="@dimen/opeTextSize"
+        app:layout_constraintStart_toEndOf="@+id/inputSubDigitLeft"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Spinner
+        android:id="@+id/inputSubDigitRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/rightDigitsStart"
+        android:layout_marginTop="@dimen/subElementsTop1"
+        android:focusable="false"
+        app:layout_constraintStart_toEndOf="@+id/textViewSubOpe"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <!--かけ算View-->
+    <CheckBox
+        android:id="@+id/checkBoxBy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/checkBoxesStart"
+        android:layout_marginTop="@dimen/byElementsTop1"
+        android:checked="@bool/plusCheck"
+        android:focusable="false"
+        android:scaleX="2"
+        android:scaleY="2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewBy"
+        android:layout_width="wrap_content"
+        android:layout_height="41dp"
+        android:layout_marginStart="@dimen/opeNamesStart"
+        android:layout_marginTop="@dimen/byElementsTop2"
+        android:focusable="false"
+        android:text="@string/TextViewBy"
+        android:textSize="@dimen/timeLimitTextSize"
+        app:layout_constraintStart_toEndOf="@+id/checkBoxBy"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Spinner
+        android:id="@+id/inputByDigitLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/leftDigitsStart"
+        android:layout_marginTop="@dimen/byElementsTop1"
+        android:focusable="false"
+        app:layout_constraintStart_toEndOf="@+id/textViewBy"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewByOpe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/opesStart"
+        android:layout_marginTop="@dimen/byElementsTop2"
+        android:focusable="false"
+        android:text="@string/textViewByOpe"
+        android:textSize="36sp"
+        app:layout_constraintStart_toEndOf="@+id/inputByDigitLeft"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Spinner
+        android:id="@+id/inputByDigitRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/rightDigitsStart"
+        android:layout_marginTop="@dimen/byElementsTop1"
+        android:focusable="false"
+        app:layout_constraintStart_toEndOf="@+id/textViewByOpe"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <!--わり算View-->
+    <CheckBox
+        android:id="@+id/checkBoxDiv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/checkBoxesStart"
+        android:layout_marginTop="@dimen/divElementsTop1"
+        android:checked="@bool/plusCheck"
+        android:focusable="false"
+        android:scaleX="2"
+        android:scaleY="2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewDiv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/opeNamesStart"
+        android:layout_marginTop="@dimen/divElementsTop2"
+        android:focusable="false"
+        android:text="@string/TextViewDiv"
+        android:textSize="@dimen/opeNamesTextSize"
+        app:layout_constraintStart_toEndOf="@+id/checkBoxDiv"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <Spinner
+        android:id="@+id/inputDivDigitLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/leftDigitsStart"
+        android:layout_marginTop="@dimen/divElementsTop1"
+        android:focusable="false"
+        app:layout_constraintStart_toEndOf="@+id/textViewDiv"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="550dp"
+        android:backgroundTint="@color/colorAccent"
+        android:onClick="start"
+        android:text="START"
+        android:textColor="@android:color/background_light"
         android:textSize="18sp"
-        app:layout_constraintStart_toEndOf="@+id/editTextPlusDigitRight"
-        app:layout_constraintTop_toBottomOf="@+id/textViewTimeLimit" />
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.836"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

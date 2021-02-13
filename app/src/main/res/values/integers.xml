@@ -1,6 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <integer name="editTextTimeLimit">2</integer>
-    <integer name="editTextPlusDigitLeft">2</integer>
-    <integer name="editTextPlusDigitRight">2</integer>
+
 </resources>
